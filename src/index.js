@@ -1,12 +1,15 @@
 
 exports.min = function min (array) {
-  return 0;
+  if(!array || array.length == 0) return 0
+  return Math.min(...array);
 }
 
 exports.max = function max (array) {
-  return 0;
+  if(!array || array.length == 0) return 0
+  return Math.max(...array);
 }
 
 exports.avg = function avg (array) {
-  return 0;
+  if(!array || array.length == 0) return 0
+  return Number(array.reduce((accumulator, current) => accumulator + current, 0)/array.length.toFixed(2));
 }
